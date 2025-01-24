@@ -9,6 +9,7 @@ export const axiosInstance = axios.create({
   withCredentials: true,
   headers: {
     "Content-Type": "application/json",
+    Accept: "application/json",
   },
 });
 
@@ -20,6 +21,10 @@ axiosInstance.interceptors.request.use(
     if (token) {
       config.headers.Authorization = `Token ${token}`;
     }
+
+    config.headers["Access-Control-Allow-Origin"] = "https://check-daily-carbon-emissions-client-ten.vercel.app";
+    config.headers["Access-Control-Allow-Credentials"] = "true";
+
     return config;
   },
   (error) => {
