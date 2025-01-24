@@ -1,14 +1,16 @@
-import * as S from "./styles";
+import { FC } from "react";
+import styled from "styled-components";
 
 interface ToastProps {
-  type: "success" | "error" | "info";
   message: string;
+  type: "error" | "success" | "info";
+  isVisible: boolean;
 }
 
-export const Toast = ({ type, message }: ToastProps) => {
-  return (
-    <>
-      <S.ToastContainer type={type}>{message}</S.ToastContainer>
-    </>
-  );
+export const Toast: FC<ToastProps> = ({ message, type, isVisible }) => {
+  if (!isVisible) return null;
+
+  return <ToastContainer type={type}>{message}</ToastContainer>;
 };
+
+const ToastContainer = styled.div<{ type: "error" | "success" | "info" }>``;

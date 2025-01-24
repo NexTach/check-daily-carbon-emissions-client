@@ -42,12 +42,11 @@ export const ProfilePage = () => {
     formData.append("profileImage", file);
 
     try {
-      const response = await axiosInstance.put("/profile/image/", formData, {
+      await axiosInstance.put("/profile/image/", formData, {
         headers: {
           "Content-Type": "multipart/form-data",
         },
       });
-
       toast.success("프로필 이미지가 업데이트되었습니다.");
     } catch (error) {
       toast.error("이미지 업로드에 실패했습니다.");

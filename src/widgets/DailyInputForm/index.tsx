@@ -9,7 +9,9 @@ import { User } from "@/entities/user/model/types";
 import { useSelector } from "react-redux";
 
 interface DailyInputFormProps {
-  onSubmit: (data: Partial<DailyRecord>) => Promise<void>;
+  onSubmit: (data: Partial<DailyRecord>) => Promise<DailyRecord | void>;
+  initialData?: DailyRecord | null;
+  currentData?: DailyRecord | null;
   user: User;
 }
 
