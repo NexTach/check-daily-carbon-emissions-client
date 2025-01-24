@@ -1,6 +1,6 @@
 import axios from "axios";
 
-export const API_URL = import.meta.env.PROD ? "/api" : "http://localhost:8000/api";
+export const API_URL = import.meta.env.PROD ? "http://192.168.56.1/api" : "http://localhost:8000/api";
 
 export const axiosInstance = axios.create({
   baseURL: API_URL,
