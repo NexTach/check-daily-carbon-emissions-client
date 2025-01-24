@@ -1,8 +1,6 @@
 import axios from "axios";
 
-export const BASE_URL = import.meta.env.PROD
-  ? "https://check-daily-carbon-emissions-client-ten.vercel.app/api"
-  : "http://localhost:8000/api";
+export const BASE_URL = import.meta.env.PROD ? "https://svc.sel5.cloudtype.app/api" : "http://localhost:8000/api";
 
 export const axiosInstance = axios.create({
   baseURL: BASE_URL,
