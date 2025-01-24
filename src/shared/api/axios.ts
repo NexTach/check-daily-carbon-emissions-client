@@ -22,8 +22,8 @@ axiosInstance.interceptors.request.use(
       config.headers.Authorization = `Token ${token}`;
     }
 
-    config.headers["Access-Control-Allow-Origin"] = "https://check-daily-carbon-emissions-client-ten.vercel.app";
-    config.headers["Access-Control-Allow-Credentials"] = "true";
+    // config.headers["Access-Control-Allow-Origin"] = "https://check-daily-carbon-emissions-client-ten.vercel.app";
+    // config.headers["Access-Control-Allow-Credentials"] = "true";
 
     return config;
   },
