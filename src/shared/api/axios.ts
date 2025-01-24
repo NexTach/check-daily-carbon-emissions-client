@@ -1,8 +1,6 @@
 import axios from "axios";
 
-export const API_URL = import.meta.env.PROD
-  ? "https://port-0-check-daily-carbon-emissions-server-gw1g2alq2jw8x4.sel5.cloudtype.app/api"
-  : "http://localhost:8000/api";
+export const API_URL = import.meta.env.PROD ? "/api" : "http://localhost:8000/api";
 
 export const axiosInstance = axios.create({
   baseURL: API_URL,
