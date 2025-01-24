@@ -5,7 +5,7 @@
   "rewrites": [
     {
       "source": "/api/:path*",
-      "destination": "http://192.168.56.1:80/api/:path*"
+      "destination": "https://port-0-check-daily-carbon-emissions-server-gw1g2alq2jw8x4.sel5.cloudtype.app/api/:path*"
     },
     {
       "source": "/(.*)",
